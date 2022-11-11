@@ -3,6 +3,89 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [14.1.0](https://github.com/material-components/material-components-web/compare/v14.0.0...v14.1.0) (2022-11-11)
+
+
+### Bug Fixes
+
+* **base:** Fix compiler errors for TS 4.8 upgrade ([c8bdf61](https://github.com/material-components/material-components-web/commit/c8bdf6144912e20bc616a268404e4f6bc9c45ae3))
+* **button:** add `pressed-outline-color` key ([ab55c07](https://github.com/material-components/material-components-web/commit/ab55c07d28e2a10b30260021e97f8c337208e937))
+* **button:** Add line-height: initial to button progress indicator class ([602fe8e](https://github.com/material-components/material-components-web/commit/602fe8efa3f3c9a41c7f74a7c5717a0abdec0c60))
+* **button:** Attribute `hidden` now correctly hides the button. ([88db019](https://github.com/material-components/material-components-web/commit/88db019902ca09811794b202d66ce1f9f2e54aec))
+* **button:** Refactored HCM focus ring into a base style with display: none so mixins can be applied to both a visible non-HCM ring and the HCM ring without extra specificity to override ripple-theme.focus selectors ([6a61d62](https://github.com/material-components/material-components-web/commit/6a61d62f6b2b1f6b4bcf7477bdad46ba4139e5c8))
+* **checkbox:** Attribute `hidden` now correctly hides the checkbox. ([63d3a14](https://github.com/material-components/material-components-web/commit/63d3a146e4ce16867f742ce41b1760da7233ed66))
+* **datatable:** Don't use top-level `.mdc-data-table` selector in `theme-styles` ([2c1a8f8](https://github.com/material-components/material-components-web/commit/2c1a8f8fdd53fd509bec519c1d92c1171c75b177))
+* **datatable:** Update `static-styles` mixin with remaining styles ([bacda48](https://github.com/material-components/material-components-web/commit/bacda4885c1f9e15eb4eba15bef2f56b329ef085))
+* **dialog:** Fix fullscreen scrim z-index during animation ([39f9424](https://github.com/material-components/material-components-web/commit/39f9424b3806fe8d5b45f1f0cc02fb5b4a7a6998))
+* **dom:** transparent-border mixin RTL bugfix ([395f1ce](https://github.com/material-components/material-components-web/commit/395f1ce61c0056590edd1f7b629f17c4d8599115))
+* **dom:** transparent-border mixin RTL bugfix ([07acdde](https://github.com/material-components/material-components-web/commit/07acddef343184362c317a57957a483b4c62cac4))
+* **fab:** Attribute `hidden` now correctly hides the radio button. ([c501884](https://github.com/material-components/material-components-web/commit/c5018840c89427aeb4be71472992538ef628c868))
+* **iconbutton:** Apply icon-size theme-styles properly for font icons. ([77cf00e](https://github.com/material-components/material-components-web/commit/77cf00e3767e7ae73fd704e55830ceda8b71fdc9))
+* **iconbutton:** Extract focus ring display properties into static styles to prevent customization via density mixins from overriding focus ring display conditions ([3c7b844](https://github.com/material-components/material-components-web/commit/3c7b844c2a27c678d9be5e93f9845dd8efda5835))
+* **list:** behavior in case of changing focus from -1 to -1 with forceUpdate: true ([ae278a2](https://github.com/material-components/material-components-web/commit/ae278a2fe94fdb8c5d0716fb34cbe84a691d6146))
+* **list:** Fixing css for calculating `$mdc-list-subheader-margin` param. ([357f2e5](https://github.com/material-components/material-components-web/commit/357f2e5f15f6374c9d93da135a8b070239ba7464))
+* **list:** rolling back update of list styles since this is causing failures. ([eb103d4](https://github.com/material-components/material-components-web/commit/eb103d4b5d33e0d1535ea28ca0089d2c7002fab6))
+* **menusurface:** Calculate available space on left using `anchorMargin.left` when positioning menu. ([13eea1b](https://github.com/material-components/material-components-web/commit/13eea1b2d64cdc79f86cf065afb32e461c3d7b2b))
+* **radio:** Attribute `hidden` now correctly hides the radio button. ([cf9f123](https://github.com/material-components/material-components-web/commit/cf9f12371c251063b3ed1553c439a23f69899377))
+* **select:** Attribute `hidden` now correctly hides the select component. ([551b40d](https://github.com/material-components/material-components-web/commit/551b40d180a02c45f0432e5e49c35cfd3fb5c2b0))
+* **slider:** Move opacity target declaration ([e741b5c](https://github.com/material-components/material-components-web/commit/e741b5c82c7752c36745616d9bc407af590be7d4))
+* **slider:** resolve a couple of errors with new theming API ([8d7ae91](https://github.com/material-components/material-components-web/commit/8d7ae912ab32815d2f01e8540bc49751b8fad38d))
+* **slider:** resolve more compilation errors ([db414b8](https://github.com/material-components/material-components-web/commit/db414b864f4c248439d916d4ee36cd43316927ea))
+* **switch:** Attribute `hidden` now correctly hides the switch. ([6432d8f](https://github.com/material-components/material-components-web/commit/6432d8fd7862fb39258a7970119f8db9eb8fbdb0))
+* **tabs:** Attribute hidden now correctly hides tabs. ([110fafa](https://github.com/material-components/material-components-web/commit/110fafa17ac0756adf377e50b51d8551aab8eb54))
+* **tabs:** rolling back style changes due to screenshot breakages. ([5e5c2af](https://github.com/material-components/material-components-web/commit/5e5c2afc06d26a4d091570baf223d8abd79a2f06))
+* **tabs:** rolling back style changes due to screenshot breakages. ([2155064](https://github.com/material-components/material-components-web/commit/215506426df0e309e27ce46898c9e5ea6c51da90))
+* **textfield:** Fix bugs and compilation errors due to custom properties in the theme map ([1dc797e](https://github.com/material-components/material-components-web/commit/1dc797e7f4efe9010be7097b040c0fcb1902ca8c))
+* Makes material component to depend on https://github.com/google/safevalues and be Trusted Type compatible. ([a44241e](https://github.com/material-components/material-components-web/commit/a44241e5428e7f83733b2bd8ab7acc851fc2fb85))
+* **text-field:** Update textfield icons to allow spacebar keypresses to trigger an interaction ([c0a11ef](https://github.com/material-components/material-components-web/commit/c0a11ef0d000a098fd0c372be8f12d6a99302855))
+* **textfield:** Fix several tokens in theming API ([d3344c1](https://github.com/material-components/material-components-web/commit/d3344c16fd9c006059174e1c3b6d90d2302e8134))
+* **textfield:** Fix several tokens in theming API ([9f17ff2](https://github.com/material-components/material-components-web/commit/9f17ff2cb20cb503cedcadbc473b09bc77c6a93e))
+* **textfield:** Fix several tokens in theming API ([271aedc](https://github.com/material-components/material-components-web/commit/271aedc306a6adc6acc1f2fe2bb460604c7c3a75))
+* **textfield:** Improve textfield character counter for screen reader ([2797ff8](https://github.com/material-components/material-components-web/commit/2797ff8b651ee34900cf38b115dc69193abdb7b8))
+* **textfield:** Make it possible to customise leading and trailing icon in disabled states separately ([00d8de0](https://github.com/material-components/material-components-web/commit/00d8de0aadef3f3caffc1ca2a13cf932057dcdbe))
+* **tooltip:** Fix incorrect measurements of rich tooltip widths on subsequent renders. ([7ab3cd3](https://github.com/material-components/material-components-web/commit/7ab3cd3c82b92e741be2e67ead5c44a0ceabe794))
+* **tooltip:** Fixing tooltip's z-index mixin. ([a40e3c7](https://github.com/material-components/material-components-web/commit/a40e3c7684ea43f4a75f6afc75a0b8a34f49b674))
+
+
+### Features
+
+* add simpler theming validation functions ([558c2be](https://github.com/material-components/material-components-web/commit/558c2be6282cfe6db7f166d21350f866011955f8))
+* **button:** Mixin styling for progress buttons ([2860d24](https://github.com/material-components/material-components-web/commit/2860d244d9fc4c5bf47d3f03e7dc60bbfc56c7c9))
+* **chips:** fix HCM chip styles ([86efd56](https://github.com/material-components/material-components-web/commit/86efd56f6a2aa9870a8457900e686bc35d3cb3bc))
+* **circularprogress:** Added theme mixin that declares custom properties in MDC circular progress ([826a3d8](https://github.com/material-components/material-components-web/commit/826a3d8bede847f254702f7e652720b84d39234d))
+* **circularprogress:** Added theme styles mixin to MDC circular progress ([a02fe49](https://github.com/material-components/material-components-web/commit/a02fe49d397ba74b848b05b788f865193715d1bc))
+* **data-table:** Include modifier keys in MDC data table row click event data ([5b40eb9](https://github.com/material-components/material-components-web/commit/5b40eb9886f63aa9d8e8d571fb7aedeaf3d97892))
+* **datatable:** Add `theme-styles` and `theme` mixins ([92b2556](https://github.com/material-components/material-components-web/commit/92b2556cff2267b5f3e465c682b7dc032ba2be41))
+* **dialog:** add a scrim-less dialog, that does not block interaction with the page ([2a6ddc1](https://github.com/material-components/material-components-web/commit/2a6ddc1cff903da5e17766a214d76fc8cb3904d8))
+* **dialog:** Add display mixin ([bebf5bf](https://github.com/material-components/material-components-web/commit/bebf5bfdf0ca880e6ce4a4b8c2f13f62bf433abe))
+* **fab:** Add support for container-surface-tint-layer-color ([e340b04](https://github.com/material-components/material-components-web/commit/e340b04c53f1b8db0951fc51a3e368231f39a781))
+* **focus:** Add focus ring component. ([587d8f8](https://github.com/material-components/material-components-web/commit/587d8f871df33f9f7584d9e6612389e93c6eb04f))
+* **linearprogress:** Added theme mixin that declares custom properties in MDC linear progress ([d25f340](https://github.com/material-components/material-components-web/commit/d25f3404c0a8658f2639cd7845a98aef62063988))
+* **list:** Add support for several new tokens ([cec7fb9](https://github.com/material-components/material-components-web/commit/cec7fb9878e548f7f070c5b0f9572cf34e3cce36))
+* **list:** Added boilerplate code for list theming API implementation ([df47894](https://github.com/material-components/material-components-web/commit/df47894dbe5132b66af0df9c53a54d7d1030f397))
+* **list:** Added Theming API to MDC list ([b18a873](https://github.com/material-components/material-components-web/commit/b18a873dcb2800b3263d7636e829fa94b3c12d6d))
+* **list:** Creates a `static-styles` mixin that holds all the non-themeable list styles. ([73ca9db](https://github.com/material-components/material-components-web/commit/73ca9dbb058c47c557aff16137277a7bd33d0b8c))
+* **list:** Creates a static-styles mixin that holds all the non-themeable list styles. ([58733ef](https://github.com/material-components/material-components-web/commit/58733ef418bf8641a5b3b7fd33e8e2bb1d0e7b97))
+* **list:** Defines a `theme` mixin for list component. Also adjusts the `theme-styles` mixin so that it emits custom properties. ([3cc30f6](https://github.com/material-components/material-components-web/commit/3cc30f6adb6a5496601dd458a8a9ef40ffef7ff6))
+* **select:** add theme mixin to emit CSS Custom Properties. ([e74b7ba](https://github.com/material-components/material-components-web/commit/e74b7ba7e4ffb1999c0ef80f45e2b08b01353930))
+* **select:** Copy over aria-label from option to selected text ([ecfee94](https://github.com/material-components/material-components-web/commit/ecfee946fb16d47fa35a2f53d4d1ed3f5ecf7a9e))
+* **select:** Copy over aria-label from option to selected text ([13e9b0d](https://github.com/material-components/material-components-web/commit/13e9b0d1f2d795ecf7b9ab782e1dda0f25b603b1))
+* **select:** Copy over aria-label from option to selected text ([c9b1a31](https://github.com/material-components/material-components-web/commit/c9b1a31e424b9e90c4a112cd3175fffae112af88))
+* **snackbar:** Added theme mixin that declares custom properties ([8647092](https://github.com/material-components/material-components-web/commit/8647092f79d7838d85a1215f29fc1a08c57f02e8))
+* **snackbar:** Added theme styles mixin ([59cf61d](https://github.com/material-components/material-components-web/commit/59cf61d6b1e9ffbbfd67f999565e81fef423d63b))
+* **textfield:** add support for several new tokens ([d71935c](https://github.com/material-components/material-components-web/commit/d71935c8bf8dd6e1a4a7a38e57d02d3de4f56f67))
+* **textfield:** Ensure Theming API feature consistency ([7134a77](https://github.com/material-components/material-components-web/commit/7134a7752e5d06837e1eb3da7f2b49d6ba9fb72c))
+* **tooltip:** Updating `handleDocumentClick` method to utilize a new `isInstanceOfElement` adapter method. ([9af09b9](https://github.com/material-components/material-components-web/commit/9af09b967a7c01c6c45d2afb5cbb00f0e43904ce))
+* generate M3 tokens for v0.132 ([70b8ac1](https://github.com/material-components/material-components-web/commit/70b8ac16e68eb842315374c551e597f02d3d3a1d))
+* Support '-5' density for text fields ([e457014](https://github.com/material-components/material-components-web/commit/e4570146f182059e919d089d26bc6b2813015f10))
+* Update icon button theme `size` function to be able to accept values with rem units. ([0e3dc8e](https://github.com/material-components/material-components-web/commit/0e3dc8e3892e2cda93062eb64ff498dbc18203f3))
+* **tooltip:** Adding side positioning options for plain tooltips. ([ba9c296](https://github.com/material-components/material-components-web/commit/ba9c29637109e300121c79a902df12310d9cf9fe))
+* **tooltip:** Emit event for tooltip shown. ([31e517c](https://github.com/material-components/material-components-web/commit/31e517cea3002785ad2936ebc6ef12317b9d4133))
+
+
+
+
+
 # [14.0.0](https://github.com/material-components/material-components-web/compare/v13.0.0...v14.0.0) (2022-04-27)
 
 
